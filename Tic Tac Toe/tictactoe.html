@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<center>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="\favicon.ico">
+</head>
+<h1 style="color: red;"> Tic Tac Toe</h1>
+<p style="color: white;">Rules of the Game : <br> 1.Game starts with " X " <br>2.Second Move goes for the " O "<br>3.Player who gets their symbols in three consecutive or diagonal manner they wins!
+</p> <br><br><br><br>
+<body>
+
+	<div class="board">
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+		<div class="cell" onclick="placeMark(this)"></div>
+	</div><br><br>
+
+	<audio id="audioX" src="ting.mp3"></audio>
+	<audio id="audioO" src="gameover.mp3"></audio>
+	<audio id="audioWin" src="synth-bass-drop-impact-14706.mp3"></audio>
+	<audio id="audioTie" src="bass-dropmp3-14596.mp3.mp3"></audio> <br>
+  <button onclick="resetBoard()">Reset</button>
+	<script type="text/javascript" src="script.js"></script>
+	</center>
+</body>
+</html>

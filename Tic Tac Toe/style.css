@@ -1,0 +1,28 @@
+body{
+	background-color: lightgrey;
+	background-image: url('photo-1553095066-5014bc7b7f2d.avif');
+  background-size: cover;
+}
+.board{
+	background-color: "blue"
+}
+.board {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.cell {
+	width: 100px;
+	height: 100px;
+	border: 1px solid white;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	cursor: pointer;
+	color: white;
+}
