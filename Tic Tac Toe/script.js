@@ -1,6 +1,6 @@
 let turn = "X";
 let cells = document.querySelectorAll(".cell");
-
+let vsComputer = false;
 
 function placeMark(cell) {
 	if (!cell.textContent) {
@@ -13,6 +13,29 @@ function placeMark(cell) {
 			reset();
 		} else {
 			turn = turn === "X" ? "O" : "X";
+
+			if (vsComputer && turn === "O") {
+				playComputerTurn();
+			}
+		}
+	}
+}
+
+function playComputerTurn() {
+	const emptyCells = Array.from(cells).filter(cell => !cell.textContent);
+	const randomIndex = Math.floor(Math.random() * emptyCells.length);
+	const cell = emptyCells[randomIndex];
+
+	if (cell) {
+		cell.textContent = "O";
+		if (checkWin()) {
+			alert("Computer wins!");
+			reset();
+		} else if (checkDraw()) {
+			alert("It's a draw!");
+			reset();
+		} else {
+			turn = "X";
 		}
 	}
 }
@@ -42,14 +65,11 @@ function reset() {
 	turn = "X";
 }
 
-
-function resetBoard() {
-  // Get all the cell elements
-  const cells = document.querySelectorAll('.cell');
-
-  // Reset the value of each cell to an empty string
-  cells.forEach(cell => cell.innerHTML = '');
+function toggleVsComputer() {
+	vsComputer = !vsComputer;
+	reset();
 }
+
 // Define audio elements
 const xAudio = new Audio('synth-bass-drop-impact-14706.mp3');
 const oAudio = new Audio('ting.mp3');
@@ -77,6 +97,10 @@ function placeMark(cell) {
 
 			// Switch turns
 			turn = turn === "X" ? "O" : "X";
+
+			if (vsComputer && turn === "O") {
+				playComputerTurn();
+			}
 		}
 	}
 }
@@ -91,11 +115,9 @@ function reset() {
 	resetAudio.play();
 
 	turn = "X";
+	vsComputer = false;
 }
+
 function resetBoard() {
   // Get all the cell elements
-  const cells = document.querySelectorAll('.cell');
-
-  // Reset the value of each cell to an empty string
-  cells.forEach(cell => cell.innerHTML = '');
-}
+  const cells
