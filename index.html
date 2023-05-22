@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-  <center>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -32,6 +31,11 @@
       /* Image Animation */
       .profile-image {
         animation: rotateImage 10s linear infinite;
+        transition: transform 0.5s ease;
+      }
+
+      .profile-image:hover {
+        transform: scale(1.2);
       }
 
       @keyframes rotateImage {
@@ -42,6 +46,18 @@
           transform: rotate(360deg);
         }
       }
+
+      /* Table Animation */
+      table {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      table.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
 
     <title>Profile</title>
@@ -51,52 +67,34 @@
       <h1>Paladugula Pruthvi</h1>
       <img src="pp_1.png" class="img-fluid profile-image" height="250" width="250" alt="myself">
     </div>
-<div class="dropdown">
- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-   Contact info
- </button>
- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-   <li><a class="dropdown-item" href="#">Phone - +91 9014268576</a></li>
-   <li><a class="dropdown-item" href="https://github.com/pruthvi1811">Github - click me </a></li>
-   <li><a class="dropdown-item" href="https://www.linkedin.com/in/pruthvi-paladugula-4b620b144/">Linkedin - click me</a></li>
- </ul>
-</div> <br><br>
-<div>
- <h1 class="display-5">Myself :</h1>
- <p> Seeking a career in Artificial Intelligence, eager to gain more experience in the field of computers and technology by <br>
-getting involved in projects which improve my skills, and looking forward to work with people of various domains. </p>
-</div>
-<div>
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">S.No</th>
-      <th scope="col">COLLEGE / UNIVERSITY</th>
-      <th scope="col">GPA</th>
-      <th scope = "col">Year of Passing</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Amrita Vishwa Vidyapeetam, Kollam, Kerala</td>
-      <td>7.97</td>
-      <td>2024</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Sri Chaitanya Junior Kalasala, Vijayawada, Andhra Pradesh</td>
-      <td>9.73</td>
-      <td>2020</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Sri Chaitanya Techno School, Bhimavaram, Andhra Pradesh</td>
-      <td>10</td>
-      <td>2018</td>
-    </tr>
-  </tbody>
-</table><br><br>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>30</td>
+          <td>New York</td>
+        </tr>
+        <tr>
+          <td>Jane Smith</td>
+          <td>25</td>
+          <td>London</td>
+        </tr>
+        <tr>
+          <td>Mark Johnson</td>
+          <td>35</td>
+          <td>Paris</td>
+        </tr>
+      </tbody>
+    </table>
+<br><br>
   <h1 class="display-5">Certifications : </h1>
 <p><strong><a href="https://www.credly.com/badges/8e3e2535-b9ae-4a8a-a598-e34dee70c12e/public_url">AWS - Introduction to Cloud , 2023</a></strong></p> <br><br>
 <h1 class="display-5">Certificates : </h1>
