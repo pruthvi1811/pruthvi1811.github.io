@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+  }
+  
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  .navbar {
+    background-color: black;
+}
+.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.navbar-nav li a {
+    color: black;
+}
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  #a:hover, #a1:hover, #a2:hover, #a3:hover, #a4:hover, #a5:hover, #a6:hover,#a7:hover,#a8:hover,#a9:hover{
+    content: url("avatar1.jpeg");
+  }
+  #a10:hover{
+    content: url("avatar12.png");
+  }
+
+  #a11:hover{
+    content: url("avatar13.jpeg");
+  }
+  #a12:hover{
+    content: url("avatar14.png");
+  }
+
+  #a13:hover, #a14:hover, #a15:hover, #a16:hover{
+    content: url("avatar2.jpeg");
+  }
+  #a17:hover, #a18:hover, #a19:hover{
+    content: url("avatar3.jpeg");
+  }
+
+  #a21:hover, #a20:hover{
+    content: url("avatar4.png");
+  }
+  #a22:hover{
+    content: url('club1.png');
+  }
+  #a23:hover{
+    content: url('club2.png');
+  }
+  #a24:hover{
+    content: url('avatar5.png');
+  }
+  #a25:hover{
+    content: url('avatar6.jpeg');
+  }
+  #a26:hover{
+    content: url('avatar7.png');
+  }
+  #a27:hover{
+    content: url('avatar11.jpg');
+  }
+  #a28:hover{
+    content: url('avatar8.png');
+  }
+  #a29:hover{
+    content: url('avatar9.jpg');
+  }
+  #a30:hover{
+    content: url('avatar10.jpg');
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
